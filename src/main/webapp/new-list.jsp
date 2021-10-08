@@ -14,7 +14,7 @@ Collector Name: <input type = "text" name = "collectorName"><br />
 Available Items:<br />
 <select name="allItemsToAdd" multiple size="6">
 <c:forEach items="${requestScope.allItems}" var="currentitem">
- <option value = "${currentitem.id}">${currentitem.movie} | 
+<option value = "${currentitem.id}">${currentitem.movieName} | 
 ${currentitem.genre}</option>
 </c:forEach>
 </select>

@@ -16,10 +16,10 @@
  <td><h2>${currentlist.listName}</h2></td></tr>
  
  <tr><td colspan="3">Movie Collector: 
-${currentlist.MovieCollector.collectorName}</td></tr>
+${currentlist.collector.collectorName}</td></tr>
  <c:forEach var = "listVal" items = "${currentlist.listOfMovies}">
  <tr><td></td><td colspan="3">
- ${listVal.movie}, ${listVal.genre}
+ ${listVal.movieName}, ${listVal.genre}
  </td>
  </tr>
  </c:forEach>
@@ -30,6 +30,6 @@ ${currentlist.MovieCollector.collectorName}</td></tr>
 <input type="submit" value = "add" name = "doThisToList">
 </form>
 <a href="addMoviesForListServlet">Create a new List</a>
-<a href="index.html">Insert a new item</a>
+<a href="movieindex.html">Insert a new item</a>
 </body>
 </html>

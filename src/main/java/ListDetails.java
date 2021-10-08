@@ -21,7 +21,7 @@ public class ListDetails {
 	private String listName;
 	@ManyToOne (cascade=CascadeType.PERSIST)
 	private MovieCollector collector;
-	@OneToMany(cascade=CascadeType.PERSIST, fetch=FetchType.EAGER)
+	@OneToMany(cascade=CascadeType.MERGE, fetch=FetchType.EAGER)
 	private List<Movie> listOfMovies;
 	public ListDetails() {
 		// TODO Auto-generated constructor stub

@@ -27,8 +27,8 @@ public class MovieHelper {
 	}
 	
 	public	List<Movie>	showAllItems(){
-		EntityManager	em	=	emfactory.createEntityManager();
-		List<Movie>	allItems	= em.createQuery("SELECT i FROM Movie i").getResultList();
+		EntityManager em	=	emfactory.createEntityManager();
+		List<Movie>	allItems = em.createQuery("SELECT i FROM Movie i").getResultList();
 		return	allItems;
 		}
 	

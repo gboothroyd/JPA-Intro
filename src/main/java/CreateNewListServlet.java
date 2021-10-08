@@ -32,14 +32,18 @@ public class CreateNewListServlet extends HttpServlet {
     		// TODO Auto-generated method stub
     		MovieHelper mh = new MovieHelper();
     		String listName = request.getParameter("listName");
-    		System.out.println("List Name: "+ listName);
+    		System.out.println("List Name: " + listName);
+    		
     		String collectorName = request.getParameter("collectorName");
+    		
     		String[] selectedItems = request.getParameterValues("allItemsToAdd");
+    		
     		List<Movie> selectedItemsInList = new ArrayList<Movie>();
+    		
     		//make sure something was selected – otherwise we get a null pointer exception
     		if (selectedItems != null && selectedItems.length > 0) 
     		{
-    		for(int i = 0; i<selectedItems.length; i++) {
+    		for(int i = 0; i < selectedItems.length; i++) {
     		System.out.println(selectedItems[i]);
     		Movie m = mh.searchForItemById(Integer.parseInt(selectedItems[i]));
     		selectedItemsInList.add(m);

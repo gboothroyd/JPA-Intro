@@ -28,10 +28,16 @@ public class ViewAllItemsServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MovieHelper mh = new MovieHelper();
 		request.setAttribute("allItems", mh.showAllItems());
+		
+		 
+		 
 		String path = "/movie-list.jsp";
+		
+		
 		if(mh.showAllItems().isEmpty()){
 		path = "/movieindex.html";
 		}
+		
 		getServletContext().getRequestDispatcher(path).forward(request, response);
 	}
 
